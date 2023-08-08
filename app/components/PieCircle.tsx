@@ -3,7 +3,8 @@ import React from 'react';
 
 const PieCircle: React.FC = () => {
   return (
-    <div className="w-[48em] h-[48em] flex absolute justify-center rounded-full overflow-hidden border-green-200 border-[12px]" style={{top: -200, left: -200}}>
+    <div className=" transition transform ease-in-out delay-100 duration-1000 active:scale-[9.1] active:rotate-[180deg] w-[32rem] h-[32rem] flex absolute justify-center rounded-full overflow-hidden border-green-200 border-[12px] 
+			" style={{top: -200, left: -200}}>
 				<div className="absolute flex items-center justify-center w-full h-full transform rotate-[0deg]">
 					<div className="w-full h-full bg-orange-300 clip-path-triangle"></div>
 				</div>
