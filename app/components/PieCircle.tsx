@@ -1,14 +1,36 @@
 import React from 'react';
 
+
 const PieCircle: React.FC = () => {
   return (
-    <div className="w-[64rem] h-[64rem] relative rounded-full overflow-hidden">
-        <div className="absolute w-full h-full bg-yellow-500 transform rotate-0 origin-center clip-path-triangle"></div>
-        <div className="absolute w-full h-full bg-red-500 transform rotate-[60deg] origin-center clip-path-triangle" ></div>
-        <div className="absolute w-full h-full bg-blue-500 transform rotate-[120deg] origin-center clip-path-triangle" ></div>
-				<div className="absolute w-full h-full bg-green-500 transform rotate-[180deg] origin-center clip-path-triangle" ></div>
-				<div className="absolute w-full h-full bg-purple-500 transform rotate-[240deg] origin-center clip-path-triangle" ></div>
-				<div className="absolute w-full h-full bg-teal-500 transform rotate-[300deg] origin-center clip-path-triangle" ></div>
+    <div className="w-[48em] h-[48em] flex absolute justify-center rounded-full overflow-hidden border-green-200 border-[12px]" style={{top: -200, left: -200}}>
+				<div className="absolute flex items-center justify-center w-full h-full transform rotate-[0deg]">
+					<div className="w-full h-full bg-orange-300 clip-path-triangle"></div>
+				</div>
+				<div className="absolute flex items-center justify-center w-full h-full transform rotate-[60deg]">
+					<div className="w-full h-full bg-orange-300 clip-path-triangle"></div>
+				</div>
+				<div className="absolute flex items-center justify-center w-full h-full transform rotate-[120deg]">
+					<div className="w-full h-full bg-orange-300 clip-path-triangle"></div>
+				</div>
+				<div className="absolute flex items-center justify-center w-full h-full transform rotate-[180deg]">
+					<div className="w-full h-full bg-orange-300 clip-path-triangle"></div>
+				</div>
+				<div className="absolute flex items-center justify-center w-full h-full transform rotate-[240deg]">
+					<div className="w-full h-full bg-orange-300 clip-path-triangle"></div>
+				</div>
+				<div className="absolute flex items-center justify-center w-full h-full transform rotate-[300deg]">
+					<div className="w-full h-full bg-orange-300 clip-path-triangle"></div>
+				</div>
+
+				<div className='relative flex w-full h-full justify-center'>
+					<div className="absolute w-4 h-full bg-green-200 transform rotate-[30deg] origin-center"></div>
+					<div className="absolute w-4 h-full bg-green-200 transform rotate-[90deg] origin-center"></div>
+					<div className="absolute w-4 h-full bg-green-200 transform rotate-[150deg] origin-center"></div>
+					<div className="absolute w-4 h-full bg-green-200 transform rotate-[210deg] origin-center"></div>
+					<div className="absolute w-4 h-full bg-green-200 transform rotate-[270deg] origin-center"></div>
+					<div className="absolute w-4 h-full bg-green-200 transform rotate-[330deg] origin-center"></div>
+				</div>
     </div>
   );
 };
