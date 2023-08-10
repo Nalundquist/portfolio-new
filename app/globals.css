@@ -31,5 +31,5 @@ body {
 }
 
 .clip-path-strawtip {
-  clip-path: polygon(100% 100%, 20% 20%, 80% 80%);
+  clip-path: polygon(100% 0, 20% 0, 80% 0);
 }
