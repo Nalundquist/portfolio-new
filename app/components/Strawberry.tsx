@@ -1,14 +1,36 @@
 import React from "react";
 
 const Strawberry: React.FC = () => {
-	return(
-		<div className='absolute flex h-[18rem] w-[18rem] justify-center transform rotate-[45deg] ' style={{top: 150, right: 280}}>
-			<div className='relative h-[10rem] w-full bg-red-400 rounded-full flex justify-center flex-row'></div>
-				<div className="relative h-full w-full transform translate-y-[50%] bg-red-400 rotate-[30deg] skew-y-[30deg] overflow-hidden rounded-[20%] content-['']
-					after:absolute after:bg-red-400 after:rounded-br-[50%] after:translate-y-[-30deg] after:skew-y-[-30deg] after:rotate-[-30deg] after:skew-x-[-30deg] after:translate-x-[24%]
-					before:absolute before:bg-red-400 before:rounded-bl-[50%] before:translate-y-[-30deg] before:skew-y-[-30deg] before:rotate-[-30deg] before:skew-x-[30deg] before:translate-x-[-24%]"></div>
-		</div>
-	)
+  const seedPositions = [
+    { top: 24, left: -42 },
+    { top: 12, left: -10 },
+    { top: 15, left: -50 },
+		{ top: 20, left: -42 },
+    { top: 12, left: -10 },
+    { top: 65, left: -50 },
+		{ top: 24, left: -42 },
+    { top: 52, left: -60 },
+    { top: 15, left: -50 },
+		{ top: 24, left: -42 },
+    { top: 42, left: -10 },
+    { top: 45, left: -70 }
+  ];
+
+  return (
+    <div className='absolute flex h-[18rem] w-[18rem] justify-center transform rotate-[30deg] scale-[1.45] ' style={{ top: 150, right: 280 }}>
+      <div className='flex flex-column relative h-[10rem] w-full bg-red-600 flex justify-center flex-row clip-path-strawberry'>
+        {seedPositions.map((position, index) => (
+          <div
+            key={index}
+            className="bg-amber-500 w-[20px] h-[30px] relative clip-path-seed"
+            style={{
+              transform: `translate(${position.left}px, ${position.top}px) scale(.7)`,
+            }}
+          ></div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Strawberry;

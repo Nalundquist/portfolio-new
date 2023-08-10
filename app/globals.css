@@ -31,5 +31,18 @@ body {
 }
 
 .clip-path-strawtip {
-  clip-path: polygon(100% 0, 20% 0, 80% 0);
+  clip-path: polygon(0 100%, 20% 0, 100% 0);
+}
+
+.clip-path-strawberry {
+  clip-path: path(
+    "M7,42 A48,35,0,0,1,75,9 A49,35,0,0,1,145,42 Q125,125,95,130 A135,65,0,0,1,75,150 A48,105,0,0,1,45,140 Q18,120,7,42 Z"
+  )
+}
+
+.clip-path-seed {
+  clip-path: path(
+  "M6,14 A8,17,0,0,1,20,14 Q20,18,12,34 Q25,52,6,14"
+  )
+  
 }
