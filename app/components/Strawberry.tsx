@@ -19,8 +19,27 @@ const Strawberry: React.FC = () => {
     { top: 95, left: -190 }
   ];
 
+	const leafPositions = [
+		{top :-27, left: 200, rotation: 85},
+		{top :-37, left: 155, rotation: 40},
+		{top :-27, left: 100, rotation: -30},
+		{top :-37, left: 80, rotation: 0},
+	]
+
   return (
     <div className='absolute flex h-[18rem] w-[18rem] justify-center transform rotate-[30deg] scale-[1.45] ' style={{ top: 200, right: 280 }}>
+			<div className="flex flex-row relative w-full h-[6rem]">
+				{leafPositions.map((position, index) => (
+					<div
+						key={index}
+						className="bg-green-600 w-[30px] h-[50px] relative clip-path-leaf"
+						style={{
+							transform: `translate(${position.left}px, ${position.top}px) rotate(${position.rotation}deg)`
+						}}
+						></div>
+				))
+				}
+			</div>
       <div className='flex flex-column relative h-[10rem] w-full bg-red-600 flex justify-center flex-row clip-path-strawberry'>
         {seedPositions.map((position, index) => (
           <div
