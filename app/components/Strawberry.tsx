@@ -1,6 +1,12 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 
-const Strawberry: React.FC = () => {
+interface IstrawProps {
+  setVisiblePage: Function;
+}
+const Strawberry: React.FC<IstrawProps> = (props: IstrawProps) => {
+
+  const { setVisiblePage } = props;
+
   const seedPositions = [
     { top: 4, left: 89 },
     { top: 8, left: 23 },
@@ -26,8 +32,15 @@ const Strawberry: React.FC = () => {
 		{top :-37, left: 80, rotation: 0},
 	]
 
+  const handleStrawClick: MouseEventHandler = () => {
+		setVisiblePage(2);
+	}
+
   return (
-    <div className='absolute flex h-[18rem] w-[18rem] justify-center transform rotate-[30deg] scale-[1.45] ' style={{ top: 200, right: 280 }}>
+    <div 
+      className='absolute flex h-[18rem] w-[18rem] justify-center transform rotate-[30deg] scale-[1.45] ' 
+      style={{ top: 200, right: 280 }}
+      onClick={handleStrawClick}>
 			<div className="flex flex-row relative w-full h-[6rem]">
 				{leafPositions.map((position, index) => (
 					<div
